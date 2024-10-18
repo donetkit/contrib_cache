@@ -1,4 +1,4 @@
-module contrib_cache
+module github.com/donetkit/contrib_cache
 
 go 1.23.0
 
