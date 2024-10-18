@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"contrib_cache/example/client"
-	"contrib_cache/queue/queue_stream"
 	"fmt"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/example/client"
+	"github.com/donetkit/contrib_cache/queue/queue_stream"
 	rredis "github.com/redis/go-redis/v9"
 	"time"
 )

@@ -1,8 +1,8 @@
 package queue_stream
 
 import (
-	"contrib_cache/cache"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/cache"
 )
 
 type StreamQueue struct {

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"contrib_cache/example/client"
-	"contrib_cache/queue/queue_delay"
 	"fmt"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/example/client"
+	"github.com/donetkit/contrib_cache/queue/queue_delay"
 	"time"
 )
 

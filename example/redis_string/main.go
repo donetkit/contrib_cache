@@ -1,9 +1,9 @@
 package main
 
 import (
-	"contrib_cache/example/client"
-	"contrib_cache/redis"
 	"fmt"
+	"github.com/donetkit/contrib_cache/example/client"
+	"github.com/donetkit/contrib_cache/redis"
 	"time"
 )
 

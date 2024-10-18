@@ -2,9 +2,9 @@ package memory
 
 import (
 	"context"
-	"contrib_cache/cache"
 	"encoding/gob"
 	"fmt"
+	"github.com/donetkit/contrib_cache/cache"
 	"github.com/redis/go-redis/v9"
 	"io"
 	"os"

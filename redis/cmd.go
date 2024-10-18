@@ -2,8 +2,8 @@ package redis
 
 import (
 	"context"
-	"contrib_cache/cache"
 	"fmt"
+	"github.com/donetkit/contrib_cache/cache"
 	"github.com/redis/go-redis/v9"
 	"reflect"
 	"time"

@@ -1,8 +1,8 @@
 package queue_reliable
 
 import (
-	"contrib_cache/cache"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/cache"
 )
 
 type ReliableQueue struct {

@@ -2,10 +2,10 @@ package queue_reliable
 
 import (
 	"context"
-	"contrib_cache/cache"
-	"contrib_cache/queue/queue_delay"
 	"fmt"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/cache"
+	"github.com/donetkit/contrib_cache/queue/queue_delay"
 	"github.com/shirou/gopsutil/host"
 	"os"
 	"strings"

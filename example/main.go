@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"contrib_cache/cache"
-	"contrib_cache/example/client"
 	"fmt"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/cache"
+	"github.com/donetkit/contrib_cache/example/client"
 	"time"
 )
 

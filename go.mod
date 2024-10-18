@@ -4,7 +4,7 @@ go 1.23.0
 
 require (
 	github.com/donetkit/contrib-log v0.2.5
-	github.com/redis/go-redis/v9 v9.6.1
+	github.com/redis/go-redis/v9 v9.7.0
 	github.com/shirou/gopsutil v3.21.11+incompatible
 )
 

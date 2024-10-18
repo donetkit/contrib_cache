@@ -2,8 +2,8 @@ package memory
 
 import (
 	"context"
-	"contrib_cache/cache"
 	"encoding/binary"
+	"github.com/donetkit/contrib_cache/cache"
 	"hash/fnv"
 	"runtime"
 	"time"

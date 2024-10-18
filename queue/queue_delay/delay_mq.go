@@ -1,8 +1,8 @@
 package queue_delay
 
 import (
-	"contrib_cache/cache"
 	"github.com/donetkit/contrib-log/glog"
+	"github.com/donetkit/contrib_cache/cache"
 )
 
 type DelayQueue struct {

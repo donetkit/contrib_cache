@@ -1,9 +1,9 @@
 package redis
 
 import (
-	"contrib_cache/cache"
 	"encoding/hex"
 	"fmt"
+	"github.com/donetkit/contrib_cache/cache"
 	"github.com/redis/go-redis/v9"
 	"strconv"
 	"time"
