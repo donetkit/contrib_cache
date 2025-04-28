@@ -88,4 +88,7 @@ type ICache interface {
 	HashDel(key string, values ...string) int64
 	HashKeys(key string) []string
 	HashLen(key string) int64
+
+	Publish(channel string, message string) int64
+	Subscribe(channels ...string) *redis.PubSub
 }

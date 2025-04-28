@@ -608,6 +608,18 @@ func (c *Cache) HashLen(key string) int64 {
 	return cmd.Val()
 }
 
+func (c *Cache) Publish(channel string, message string) int64 {
+	cmd := c.client.Publish(c.ctx, channel, message)
+	if cmd.Err() != nil {
+		return 0
+	}
+	return cmd.Val()
+}
+
+func (c *Cache) Subscribe(channels ...string) *redis.PubSub {
+	return c.client.Subscribe(c.ctx, channels...)
+}
+
 // interfaceToStr
 func interfaceToStr(obj interface{}) string {
 	if str, ok := obj.(string); ok {

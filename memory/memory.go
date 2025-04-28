@@ -22,6 +22,14 @@ type Cache struct {
 	janitor           *janitor
 }
 
+func (c *Cache) Publish(channel string, message string) int64 {
+	return 0
+}
+
+func (c *Cache) Subscribe(channels ...string) *redis.PubSub {
+	return nil
+}
+
 func (c *Cache) SetString(key string, value string, timeOut time.Duration) error {
 	return c.Set(key, value, timeOut)
 }
