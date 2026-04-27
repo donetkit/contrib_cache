@@ -2,8 +2,9 @@ package cache
 
 import (
 	"context"
-	"github.com/redis/go-redis/v9"
 	"time"
+
+	"github.com/redis/go-redis/v9"
 )
 
 type IMemoryCache interface {
@@ -91,4 +92,7 @@ type ICache interface {
 
 	Publish(channel string, message string) int64
 	Subscribe(channels ...string) *redis.PubSub
+
+	Eval(script string, keys []string, args ...interface{}) (interface{}, error)
+	EvalSha(sha1 string, keys []string, args ...interface{}) (interface{}, error)
 }

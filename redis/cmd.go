@@ -3,10 +3,11 @@ package redis
 import (
 	"context"
 	"fmt"
-	"github.com/donetkit/contrib_cache/cache"
-	"github.com/redis/go-redis/v9"
 	"reflect"
 	"time"
+
+	"github.com/donetkit/contrib_cache/cache"
+	"github.com/redis/go-redis/v9"
 )
 
 func (c *Cache) WithDB(db int) cache.ICache {
@@ -618,6 +619,14 @@ func (c *Cache) Publish(channel string, message string) int64 {
 
 func (c *Cache) Subscribe(channels ...string) *redis.PubSub {
 	return c.client.Subscribe(c.ctx, channels...)
+}
+
+func (c *Cache) Eval(script string, keys []string, args ...interface{}) (interface{}, error) {
+	return c.client.Eval(c.ctx, script, keys, args).Result()
+}
+
+func (c *Cache) EvalSha(sha1 string, keys []string, args ...interface{}) (interface{}, error) {
+	return c.client.EvalSha(c.ctx, sha1, keys, args...).Result()
 }
 
 // interfaceToStr

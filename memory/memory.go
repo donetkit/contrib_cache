@@ -4,12 +4,13 @@ import (
 	"context"
 	"encoding/gob"
 	"fmt"
-	"github.com/donetkit/contrib_cache/cache"
-	"github.com/redis/go-redis/v9"
 	"io"
 	"os"
 	"sync"
 	"time"
+
+	"github.com/donetkit/contrib_cache/cache"
+	"github.com/redis/go-redis/v9"
 )
 
 type Cache struct {
@@ -20,6 +21,16 @@ type Cache struct {
 	defaultExpiration time.Duration
 	items             map[string]*item
 	janitor           *janitor
+}
+
+func (c *Cache) Eval(script string, keys []string, args ...interface{}) (interface{}, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (c *Cache) EvalSha(sha1 string, keys []string, args ...interface{}) (interface{}, error) {
+	//TODO implement me
+	panic("implement me")
 }
 
 func (c *Cache) Publish(channel string, message string) int64 {
