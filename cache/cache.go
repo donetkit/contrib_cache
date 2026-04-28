@@ -95,4 +95,6 @@ type ICache interface {
 
 	Eval(script string, keys []string, args ...interface{}) (interface{}, error)
 	EvalSha(sha1 string, keys []string, args ...interface{}) (interface{}, error)
+
+	HGetInt64(key string, field string) (int64, error)
 }

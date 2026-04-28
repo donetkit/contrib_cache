@@ -23,6 +23,11 @@ type Cache struct {
 	janitor           *janitor
 }
 
+func (c *Cache) HGetInt64(key string, field string) (int64, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (c *Cache) Eval(script string, keys []string, args ...interface{}) (interface{}, error) {
 	//TODO implement me
 	panic("implement me")

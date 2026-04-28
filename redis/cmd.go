@@ -629,6 +629,10 @@ func (c *Cache) EvalSha(sha1 string, keys []string, args ...interface{}) (interf
 	return c.client.EvalSha(c.ctx, sha1, keys, args...).Result()
 }
 
+func (c *Cache) HGetInt64(key string, field string) (int64, error) {
+	return c.client.HGet(c.ctx, key, field).Int64()
+}
+
 // interfaceToStr
 func interfaceToStr(obj interface{}) string {
 	if str, ok := obj.(string); ok {
