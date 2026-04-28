@@ -23,6 +23,16 @@ type Cache struct {
 	janitor           *janitor
 }
 
+func (c *Cache) ZRevRangeWithScores(key string, start int64, stop int64) ([]redis.Z, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (c *Cache) HMGet(key string, fields ...string) ([]interface{}, error) {
+	//TODO implement me
+	panic("implement me")
+}
+
 func (c *Cache) HGetInt64(key string, field string) (int64, error) {
 	//TODO implement me
 	panic("implement me")

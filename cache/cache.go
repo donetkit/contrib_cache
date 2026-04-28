@@ -97,4 +97,7 @@ type ICache interface {
 	EvalSha(sha1 string, keys []string, args ...interface{}) (interface{}, error)
 
 	HGetInt64(key string, field string) (int64, error)
+	HMGet(key string, fields ...string) ([]interface{}, error)
+
+	ZRevRangeWithScores(key string, start int64, stop int64) ([]redis.Z, error)
 }

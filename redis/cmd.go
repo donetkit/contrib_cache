@@ -633,6 +633,14 @@ func (c *Cache) HGetInt64(key string, field string) (int64, error) {
 	return c.client.HGet(c.ctx, key, field).Int64()
 }
 
+func (c *Cache) HMGet(key string, fields ...string) ([]interface{}, error) {
+	return c.client.HMGet(c.ctx, key, fields...).Result()
+}
+
+func (c *Cache) ZRevRangeWithScores(key string, start int64, stop int64) ([]redis.Z, error) {
+	return c.client.ZRevRangeWithScores(c.ctx, key, start, stop).Result()
+}
+
 // interfaceToStr
 func interfaceToStr(obj interface{}) string {
 	if str, ok := obj.(string); ok {
